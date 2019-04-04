@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.ActivitySheetsNav1">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="Clicked1"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <Label Text="List of Activity Sheets"
+                    x:Name="ActivityLabel"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Activity Sheets No.3" 
+                    FontSize="Medium"
+                    WidthRequest="200"
+                    HeightRequest="40"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Center"
+                    Clicked="ActivitySheets2Clicked"/>
+        </StackLayout>-->
+        <ScrollView>
+            <StackLayout x:Name="ActivityStack">
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

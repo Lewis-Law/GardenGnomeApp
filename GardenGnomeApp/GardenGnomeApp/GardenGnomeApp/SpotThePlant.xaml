@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.SpotThePlant"
+             Title="Spot The Plant">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="Clicked5"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" x:Name="outerStack">
+            <Grid RowSpacing="3" ColumnSpacing="3" Padding="3" VerticalOptions="FillAndExpand" x:Name="mainGrid" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".15*"></ColumnDefinition>
+                    <ColumnDefinition Width=".70*"></ColumnDefinition>
+                    <ColumnDefinition Width=".15*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".15*"></RowDefinition>
+                    <RowDefinition Height=".70*"></RowDefinition>
+                    <RowDefinition Height=".15*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="1" Grid.Row="1" x:Name="PlantImage" BackgroundColor="Black"/>
+                <Label Grid.Column="1" Grid.Row="2" x:Name="PlantName" Text="Plant Name"/>
+            </Grid>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Plant Description"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Plants found: 0" x:Name="PlantsFound"/>
+                    <Label Text="Plants Skipped: 0" x:Name="PlantsSkipped"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="FoundButton" Text="Found it!" Clicked="FoundClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="40"/>
+                    <Button x:Name="SkipButton" Text="Skip" Clicked="SkipClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="40"/>
+                </StackLayout>
+                <Button x:Name="ResetButton" Text="Reset Score" Clicked="ResetClicked" HeightRequest="40"/>
+            </StackLayout>
+        </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

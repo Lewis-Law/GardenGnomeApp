@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.TicTacToeChooseDifficulty">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Easy" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="EasyClicked"
+                    FontSize="Large"
+                    Margin="25, 20, 25, 20"/>
+            <Button Text="Morderate" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="MorderateClicked"
+                    FontSize="Large"
+                    Margin="25, 0 ,25, 0"/>
+            <Button Text="Hard" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="HardClicked"
+                    FontSize="Large"
+                    Margin="25, 20, 25, 20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

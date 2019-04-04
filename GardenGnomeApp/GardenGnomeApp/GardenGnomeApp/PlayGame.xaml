@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.PlayGame"
+             Title="Choose a Game">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="Clicked4"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView IsEnabled="False" x:Name="ScrollLayout">
+            <StackLayout>
+                <Button Image="ticTacToeButton.png" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="PlayTicTacToe"
+                    FontSize="Large"
+                    Margin="25, 20, 25, 20"
+                    />
+                <Button Image="memoryGameButton.png" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="PlayMemoryGame"
+                    FontSize="Large"
+                    Margin="25, 0 ,25, 0"
+                    />
+                <Button Image="spotThePlantButton.png" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="PlaySpotThePlant" 
+                    FontSize="Large"
+                    Margin="25, 20, 25, 20"
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

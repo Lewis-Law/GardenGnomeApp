@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.TicTacToeAvatar"
+             Title="Choose avatar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="Clicked7"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Player One, Choose Your Avatar" x:Name="avatarLabel" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Grid RowSpacing="1" ColumnSpacing="1" Padding="0" VerticalOptions="FillAndExpand" x:Name="mainGrid" BackgroundColor="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".33*"></ColumnDefinition>
+                    <ColumnDefinition Width=".33*"></ColumnDefinition>
+                    <ColumnDefinition Width=".33*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" x:Name="I1" BackgroundColor="White" Source="ggapple.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="0" Grid.Row="1" x:Name="I2" BackgroundColor="White"  Source="ggbird.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="0" x:Name="I3" BackgroundColor="White" Source="ggbutterfly.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="1" x:Name="I4" BackgroundColor="White" Source="ggflower.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="2" Grid.Row="0" x:Name="I5" BackgroundColor="White" Source="ggleaf.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="2" Grid.Row="1" x:Name="I6" BackgroundColor="White" Source="ggtree.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

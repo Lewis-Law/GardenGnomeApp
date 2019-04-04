@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.SettingsPage" 
+             Title="Settings">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--
+            <Label Text="Sound Effects"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Slider/>
+            -->
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Background Music"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Start" />
+                <Switch HorizontalOptions="Center"
+                Toggled="Switch_Toggled"/>
+            </StackLayout>
+
+            <Label x:Name="DifficultyLabel" Text="Change Difficulty" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Button HeightRequest="30" x:Name="easyButton" Text="Easy" Clicked="EasyClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button HeightRequest="30" x:Name="moderateButton" Text="Moderate" Clicked="ModerateClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button HeightRequest="30" x:Name="hardButton" Text="Hard" Clicked="HardClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <Label x:Name="OfflineModeLabel" Text="Offline Mode" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Button HeightRequest="30" x:Name="OnButton" Text="Online" Clicked="OnClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button HeightRequest="30" x:Name="OffButton" Text="Offline" Clicked="OffClicked" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            
+            
+            <!--
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Notifications"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Start" />
+
+                <Switch IsToggled="{Binding RememberLastUser}" HorizontalOptions="Center"/>
+            </StackLayout>
+            -->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Apply"  BorderRadius="20" BorderWidth="2"
+                        HeightRequest="40"
+                        Margin="10"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Clicked="ApplyClicked"/>
+                <Button Text="Default"  BorderRadius="20" BorderWidth="2"
+                        HeightRequest="40"
+                        Margin="10"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Clicked="DefaultClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

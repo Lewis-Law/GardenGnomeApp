@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GardenGnomeApp"
+             x:Class="GardenGnomeApp.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="SettingsClicked"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ScrollView IsEnabled="False" x:Name="ScrollLayout">
+        <StackLayout>
+            <Image Source="GardenGnomeLogo.png"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               x:Name="Logo"
+               Margin="25, 0, 25, 0"/>
+            <Button  
+                Image="playButton.png"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Clicked="PlayClicked"
+                FontSize="Large"
+                Margin="25, 50 ,25, 50"/>
+            <Button  
+                Image="activitySheetsButton.png"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Clicked="ActivitySheetsClicked"
+                FontSize="Large"
+                Margin="25, 50, 25, 70"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

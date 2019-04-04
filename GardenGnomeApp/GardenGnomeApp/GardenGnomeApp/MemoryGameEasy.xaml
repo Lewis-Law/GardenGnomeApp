@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GardenGnomeApp.MemoryGameEasy"
+             Title="Easy">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Settings" Activated="Clicked10"  Order="Primary" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" x:Name="outerStack">
+            <Grid RowSpacing="3" ColumnSpacing="3" Padding="3" VerticalOptions="FillAndExpand" x:Name="mainGrid" BackgroundColor="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".33*"></ColumnDefinition>
+                    <ColumnDefinition Width=".33*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                    <RowDefinition Height=".33*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" x:Name="I00" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="0" Grid.Row="1" x:Name="I01" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="0" Grid.Row="2" x:Name="I02" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="0" x:Name="I10" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="1" x:Name="I11" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="2" x:Name="I12" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="0" Grid.Row="3" x:Name="I03" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Grid.Row="3" x:Name="I13" BackgroundColor="White">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Pairs Attempted: "/>
+                    <Label x:Name="PairsFlipped"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Number of pairs remaining: "/>
+                    <Label x:Name="PairsRemain"/>
+                </StackLayout>
+                <Button x:Name="PlayAgainButton" Text="Play Again" Clicked="ResetClicked" HeightRequest="40"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
